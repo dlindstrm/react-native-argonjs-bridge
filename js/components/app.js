@@ -28,9 +28,6 @@ export default class App extends Component {
   render() {
     return(
       <Camera
-        ref={(cam) => {
-          this.camera = cam;
-        }}
         style={styles.camera}
         aspect={Camera.constants.Aspect.fill}>
         <WebViewBridge
@@ -38,7 +35,7 @@ export default class App extends Component {
           javaScriptEnabled={true}
           onBridgeMessage={this._onMessage}
           injectedJavaScript={INJECT_SCRIPT}
-          source={{uri: 'https://johankasperi.github.io/argon-three-starterkit/'}}
+          source={{uri: 'https://johankasperi.github.io/argon-three-starterkit/'}} //Change to local file or your url
           style={styles.webview}
         />
       </Camera>
