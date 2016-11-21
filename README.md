@@ -26,7 +26,7 @@ $ react-native run-android
 
 Author
 -----
-Daniel Lindström<br>
-[lindstrm.se](http://lindstrm.se)<br>
 Johan Kasperi<br>
 [kspri.se](http://kspri.se)<br>
+Daniel Lindström<br>
+[lindstrm.se](http://lindstrm.se)<br>
