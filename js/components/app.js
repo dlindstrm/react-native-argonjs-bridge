@@ -27,6 +27,12 @@ export default class App extends Component {
 
   render() {
     return(
+      <Camera
+        ref={(cam) => {
+          this.camera = cam;
+        }}
+        style={styles.camera}
+        aspect={Camera.constants.Aspect.fill}>
         <WebViewBridge
           ref={webview => { this.webview = webview }}
           javaScriptEnabled={true}
@@ -35,6 +41,7 @@ export default class App extends Component {
           source={{uri: 'https://johankasperi.github.io/argon-three-starterkit/'}}
           style={styles.webview}
         />
+      </Camera>
     )
   }
 
