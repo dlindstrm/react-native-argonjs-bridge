@@ -19,10 +19,14 @@ const FOVManager = NativeModules.FOVComponent || NativeModules.FOVModule
 export default class App extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      fov: 0
+    }
     this.webview = null
     this._onMessage = this._onMessage.bind(this)
     this._sendMessage = this._sendMessage.bind(this)
     this._getFOV = this._getFOV.bind(this)
+    this._getFOV()
   }
 
   render() {
@@ -47,7 +51,7 @@ export default class App extends Component {
     const decodedMsg = JSON.parse(msg)
     switch (decodedMsg.method) {
       case "initialized":
-        this._getFOV()
+        this._sendMessage(KEY_FOV, this.state.fov)
         break
     }
   }
@@ -62,7 +66,7 @@ export default class App extends Component {
 
   _getFOV() {
     FOVManager.getFOV().then((value) => {
-      this._sendMessage(KEY_FOV, value)
+      this.setState({ fov: value })
     }, (error) => {
       console.log(error)
     })
