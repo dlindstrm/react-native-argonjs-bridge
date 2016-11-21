@@ -1,6 +1,6 @@
 /**
  * React Native Argonjs Starter kit
- * https://github.com/facebook/react-native
+ * https://github.com/dlindstrm/react-native-argonjs-bridge
  */
 
 import React, { Component } from 'react'
