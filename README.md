@@ -1,7 +1,7 @@
 react-native-argonjs-starterkit
 ============
 
-[React Native](https://facebook.github.io/react-native/) and [Webview Bridge](https://github.com/alinz/react-native-webview-bridge) example app, developed to work together with [argon-three-starterkit](https://github.com/johankasperi/argon-three-starterkit).
+A [React Native](https://facebook.github.io/react-native/) and [Webview Bridge](https://github.com/alinz/react-native-webview-bridge) example app that makes the geopose feature of [Argon](http://argonjs.io/) functional on both Android and iOS. It fetches the field of view (FOV) of the device camera through native modules, and sends it over a bridge to Argon. Developed to work together with [argon-three-starterkit](https://github.com/johankasperi/argon-three-starterkit).
 
 Usage
 -----
